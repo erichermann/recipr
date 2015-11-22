@@ -1,0 +1,10 @@
+<% 
+index = f.object_name.gsub(/[^0-9]+/,'')
+%>
+
+<div class='col-xs-8 padding-10 background-light-grey' id='ingredient_<%=index %>'>
+  <%=f.input :ingredient_name, input_html: { size: 100 } %>
+</div>
+<div class='col-xs-4 padding-10 background-light-grey'>
+  <%=link_to_remove_fields('Remove Ingredient', f, "ingredient_#{index}") %>
+</div>

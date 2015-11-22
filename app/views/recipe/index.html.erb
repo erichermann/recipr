@@ -1,0 +1,29 @@
+<div class="row">
+  <h2>Recipes</h2>
+  
+  <div class="row">
+    <div class="col-xs-12">
+      <%=link_to('Add Recipe', new_recipe_path) %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <table border='1' width="100%" style="border:1px solid black;">
+        <tr>
+          <th class='padding-10' colspan='2'>Recipe Name</th>
+          <th class='padding-10'>Manage</th>
+        </tr>
+        
+        <% @recipes.each do |recipe| %>
+          <tr class="<%=cycle('odd','even') %>">
+            <td class='padding-10'><%=h recipe.title %></td>
+            <td class='padding-10'><%=edit_link(edit_recipe_path(recipe), :page=>params[:page]) %></td>
+            <td class='padding-10'><%=delete_link(recipe_path(recipe), :page=>params[:page]) %></td>
+          </tr>
+        <% end %>
+      </table>
+
+    </div>
+  </div>
+</div>

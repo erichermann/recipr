@@ -6,9 +6,32 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+  <body>
+    <div class="container" style="border: 2px dashed pink;">
 
-<%= yield %>
+      <header style="border: 1px solid red;">
+        <div class="row">
+          <div class="col-md-10" style="border: 1px solid purple;">&nbsp;</div>
+          <div class="col-md-2" style="border: 1px solid purple;">
+            <% if user_signed_in? %>
+              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+            <% else %>
+              <%= link_to('Login', new_user_session_path)  %>  
+            <% end %>
+          </div>
+        </div>
+      </header>
 
-</body>
+      <div class="row">
+        <div class="col-md-2" style="border: 1px solid green;">
+          <% if user_signed_in? %>
+            <%= link_to('Recipes', recipe_index_path) %> 
+          <% end %>
+        </div>
+        <div class="col-md-10" style="border: 1px solid purple;">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
