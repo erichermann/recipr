@@ -1,0 +1,223 @@
+/************************************
+http://www.colorzilla.com/gradient-editor/
+*************************************/
+
+/*-------------------------------------------------------------
+base styles
+---------------------------------------------------------------*/
+html {
+   height: 100%;
+   background-color: #e0e3e5;
+}
+
+body {
+  height: 100%;
+  color: #000;
+  font-family: "Helvetica Neue",Arial,sans-serif;
+  
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0e3e5+1,f4f8f9+1,c7daea+100 */
+  background: #e0e3e5; /* Old browsers */
+  background: -moz-linear-gradient(top,  #e0e3e5 1%, #f4f8f9 1%, #c7daea 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #e0e3e5 1%,#f4f8f9 1%,#c7daea 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #e0e3e5 1%,#f4f8f9 1%,#c7daea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e3e5', endColorstr='#c7daea',GradientType=0 ); /* IE6-9 */
+}
+
+table th, table td {
+  padding: 10px;
+  
+  border: 1px solid #000;
+}
+
+table tr {
+  /*border: 1px solid #000;*/
+}
+
+
+a {
+  color: #207cca;
+  text-decoration: underline;
+}
+
+.black-text {
+  color: #000;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.red-text {
+  color: #ff0000;
+}
+/*--------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------
+containers
+---------------------------------------------------------------*/
+
+#main-container {
+  max-width: 1170px !important;
+  border-top: 3px solid #838184;
+  border-bottom: 3px solid #3F3F3F;
+  border-left: 3px solid #666;
+  border-right: 3px solid #2F2F2F;
+  padding: 0 !important;
+  -webkit-box-shadow: 9px 10px 16px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 9px 10px 16px -10px rgba(0,0,0,0.75);
+  box-shadow: 9px 10px 16px -10px rgba(0,0,0,0.75);
+}
+
+.header {
+  max-width:1170px;
+  height:305px;
+  background-color: #ff0000;
+  background-image: url('/assets/layout_images/header_background.jpg');
+}
+/*--------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------
+navigation paths
+---------------------------------------------------------------*/
+#pages-nav {
+  border-top: 2px solid #666;
+  border-bottom: 2px solid #666;
+  /*background-color: #1C1F22;*/
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5b6b6d+4,1c1f22+100,1e5799+100 */
+  background: #5b6b6d; /* Old browsers */
+  background: -moz-linear-gradient(top,  #5b6b6d 4%, #1c1f22 100%, #1e5799 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #5b6b6d 4%,#1c1f22 100%,#1e5799 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #5b6b6d 4%,#1c1f22 100%,#1e5799 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b6b6d', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
+}
+
+#pages-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  display:table-row;
+}
+
+#pages-nav ul li {
+  /*float: left;*/
+  width:auto;
+  display: inline;
+  display:table-cell;
+  border-left: 1px solid #666;
+  border-right: 2px solid #666;
+}
+
+#pages-nav ul li a {
+  color: white;
+  float: left;
+  font-size: 16px;
+  padding: 15px;
+  display: table;
+  text-decoration: none;
+}
+
+#pages-nav ul li a:hover {
+  color:#fff;
+  background-color:#709698 !important;
+}
+
+#pages-nav ul li a:visited {
+  background-color:#0b75b2; 
+}
+
+.odd { background-color: #ccc; }
+
+.even { background-color: #ddd; }
+/*--------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------
+spacing/padding styeles
+---------------------------------------------------------------*/
+.no-margin {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.no-padding {
+  padding: 0px 0px 0px 0px;
+}
+
+.float-left { float: left; }
+.float-right { float: right; }
+
+.margin-top-05 { margin-top: 0.5em; }
+.margin-top-10 { margin-top: 1.0em; }
+.margin-top-15 { margin-top: 1.5em; }
+.margin-top-20 { margin-top: 2.0em; }
+.margin-top-25 { margin-top: 2.5em; }
+.margin-top-30 { margin-top: 3.0em; }
+
+.margin-bottom-05 { margin-bottomp: 0.5em; }
+.margin-bottom-10 { margin-bottomp: 1.0em; }
+.margin-bottom-15 { margin-bottomp: 1.5em; }
+.margin-bottom-20 { margin-bottomp: 2.0em; }
+.margin-bottom-25 { margin-bottomp: 2.5em; }
+.margin-bottom-30 { margin-bottomp: 3.0em; }
+
+.padding-05 { padding: 0.5em; }
+.padding-10 { padding: 1.0em; }
+.padding-15 { padding: 1.5em; }
+.padding-20 { padding: 2.0em; }
+.padding-25 { padding: 2.5em; }
+.padding-30 { padding: 3.0em; }
+
+.border-grey { border:1px solid #ccc; }
+.border-light-grey { border:1px solid #333; }
+.border-dark-grey { border:1px solid #666; }
+
+.background-light-grey { background-color: #f8f8f8 }
+.background-medium-grey { background-color: #ddd }
+
+.background-grey-green { background-color: #5B6B6D; }
+.background-grey-purple { background-color: #6B6370; }
+
+.background-medium-brown { background-color: #6D6157; }
+.background-light-brown { background-color: #AD958A; }
+
+.background-white { background-color: #ffffff; }
+
+.valign-text-top { vertical-align: text-top; }
+.valign-text-bottom { vertical-align: text-bottom; }
+.center-text { text-align: center; }
+
+.bold-12 {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.bold-14 {
+  font-weight: bold;
+  font-size: 14px;
+}
+/*---------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------
+element styles
+---------------------------------------------------------------*/
+ul.no-bullet-list, ol.no-bullet-list  {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  display:table-row;
+}
+
+ul.no-bullet-list ul, ol.no-bullet-list ul {
+  width:auto;
+  display: inline;
+  display:table-cell;
+  border-left: 1px solid #666;
+  border-right: 2px solid #666;
+}
+

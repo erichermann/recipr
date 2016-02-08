@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Recipr</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
+  <head>
+    <title>Recipr</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
   <body>
-    <div class="container" style="border: 2px dashed pink;">
-
-      <header style="border: 1px solid red;">
-        <div class="row">
-          <div class="col-md-10" style="border: 1px solid purple;">&nbsp;</div>
-          <div class="col-md-2" style="border: 1px solid purple;">
-            <% if user_signed_in? %>
-              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
-            <% else %>
-              <%= link_to('Login', new_user_session_path)  %>  
-            <% end %>
-          </div>
-        </div>
-      </header>
-
-      <div class="row">
-        <div class="col-md-2" style="border: 1px solid green;">
+    
+    <div id="main-container" class='container no-padding background-white'>
+      <div class="header no-margin no-padding">
+        <div class="float-right padding-05">
           <% if user_signed_in? %>
-            <%= link_to('Recipes', recipe_index_path) %> 
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+          <% else %>
+            <%= link_to('Login', new_user_session_path)  %>  
           <% end %>
         </div>
-        <div class="col-md-10" style="border: 1px solid purple;">
-          <%= yield %>
+      </div>
+      <div id="pages-nav">
+        <ul>
+          <% if user_signed_in? %>
+            <li><%= link_to('Recipes', recipe_index_path) %></li>
+          <% end %>
+        </ul>
+      </div>
+  
+      <div class="row no-padding">
+      	<div class="span12 padding-25">
+      		<%= yield %>
+      	</div>
+      </div>
+      <div class="row padding-15">
+        <div class="col-xs-12">
         </div>
       </div>
-    </div>
+    </div><!-- end container -->
+    
   </body>
 </html>

@@ -12,8 +12,9 @@
  *
  *= require_tree .
  *= require_self
- // = require 'formtastic'
  
+ // = require 'formtastic'
  //= require jquery-ui/datepicker
  // = require 'base_styles'
+ // = require 'application_layout_styles'
  */

@@ -32,4 +32,9 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'rubocop', require: false
+  gem 'factory_girl_rails', '4.2.1'
+end
+
+group :test do
+  gem 'rspec-html-matchers'
 end
