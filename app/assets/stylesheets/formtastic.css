@@ -19,43 +19,43 @@ form.formtastic select, form.formtastic p { margin:0; padding:4px; }
 form.formtastic fieldset { border:0; }
 form.formtastic em, form.formtastic strong { font-style:normal; font-weight:normal; }
 
-form.formtastic ol, form.formtastic ul 
-{ 
+form.formtastic ol, form.formtastic ul { 
 	list-style:none; 
 	/*border:1px solid red;*/
 	margin:0; 
 }
 
 form.formtastic abbr, form.formtastic acronym { border:0; font-variant:normal; }
-form.formtastic input, form.formtastic textarea, form.formtastic select 
-{ 
+form.formtastic input, form.formtastic textarea, form.formtastic select { 
 	font-family:inherit; 
 	font-size:inherit; 
 	font-weight:inherit; 
 }
-form.formtastic input, form.formtastic textarea, form.formtastic select 
-{ 
+
+form.formtastic input, form.formtastic textarea, form.formtastic select { 
 	font-size:100%; 
 	border:1px solid #ccc; 
 }
-form.formtastic legend { /*white-space:normal; color:#000;*/ }
 
+form.formtastic legend { 
+  white-space:normal; color:#000; 
+}
 
 .field {
-	padding:6px;
+  padding:6px;
 	display:block;
 	float:left;
 	width:auto;
 	/*border:1px solid red;*/
 }
 
-
 .label {
-	display:block;
+  min-width: 120px;
+  display:block;
 	float:left;
   color:#000;
+  text-align:right;
   /*
-	text-align:right;
 	padding-right:10px;
   color:#000;
   */
@@ -71,8 +71,6 @@ form.formtastic ul.errors li { padding:0; border:none; display:list-item; }
 /* FIELDSETS & LISTS
 --------------------------------------------------------------------------------------------------*/
 
-
-
 /* clearfixing the fieldsets */
 form.formtastic fieldset { /*display: inline-block; */}
 form.formtastic fieldset:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
@@ -85,13 +83,11 @@ html[xmlns] form.formtastic fieldset { display: block; }
 form.formtastic fieldset > ol > li { /*margin-bottom:1.5em;padding:4px;*/  }
 
 /* clearfixing the li's */
-form.formtastic fieldset > ol > li 
-{ 
+form.formtastic fieldset > ol > li { 
 	display: inline-block; 
 }
 
-form.formtastic fieldset > ol > li:after
-{ 
+form.formtastic fieldset > ol > li:after{ 
 	/*content: "."; display: block; height: 0; clear: both; visibility: hidden; */
 }
 html[xmlns] form.formtastic fieldset > ol > li { display: block; }
@@ -105,16 +101,14 @@ form.formtastic fieldset > ol > li.error { }
 /* LABELS
 --------------------------------------------------------------------------------------------------*/
 
-.form_block
-{
+.form_block{
 	/*border:1px solid blue;*/
-
 }
-.form_block ol
-{
+
+.form_block ol{
 	/*border: 1px solid  orange;*/
-	    list-style: none outside none;
-	    margin: 0;
+	list-style: none outside none;
+	margin: 0;
 }
 
 .fragment { 
@@ -207,8 +201,7 @@ form.formtastic fieldset > ol > li.boolean label input { margin:0 0.5em 0 0.2em;
 --------------------------------------------------------------------------------------------------*/
 form.formtastic fieldset > ol > li.radio { }
 form.formtastic fieldset > ol > li.radio fieldset ol { margin-bottom:-0.6em; }
-form.formtastic fieldset > ol > li.radio fieldset ol li 
-{ 
+form.formtastic fieldset > ol > li.radio fieldset ol li { 
 	/*border:1px solid orange;*/
 }
 form.formtastic fieldset > ol > li.radio fieldset ol li label { float:none; width:100%; }

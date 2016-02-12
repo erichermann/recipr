@@ -1,3 +1,17 @@
+/*-------------------------------------------------------------
+spacing/padding styeles
+---------------------------------------------------------------*/
+.no-margin {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.no-padding {
+  padding: 0px 0px 0px 0px;
+}
+
+.float-left { float: left; }
+.float-right { float: right; }
 
 .margin-top-05 { margin-top: 0.5em; }
 .margin-top-10 { margin-top: 1.0em; }
@@ -20,11 +34,24 @@
 .padding-25 { padding: 2.5em; }
 .padding-30 { padding: 3.0em; }
 
-.border-grey { border:1px solid #ccc }
-.border-dark-grey { border:1px solid #666 }
+.border-grey { border:1px solid #ccc; }
+.border-light-grey { border:1px solid #333; }
+.border-dark-grey { border:1px solid #666; }
 
 .background-light-grey { background-color: #f8f8f8 }
 .background-medium-grey { background-color: #ddd }
+
+.background-grey-green { background-color: #5B6B6D; }
+.background-grey-purple { background-color: #6B6370; }
+
+.background-medium-brown { background-color: #6D6157; }
+.background-light-brown { background-color: #AD958A; }
+
+.background-white { background-color: #ffffff; }
+
+.valign-text-top { vertical-align: text-top; }
+.valign-text-bottom { vertical-align: text-bottom; }
+.center-text { text-align: center; }
 
 .bold-12 {
   font-weight: bold;
@@ -35,3 +62,4 @@
   font-weight: bold;
   font-size: 14px;
 }
+/*---------------------------------------------------------------*/

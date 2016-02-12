@@ -16,16 +16,26 @@ function add_fields(link, association, content) {
   $(link).parent().before(content.replace(regexp, new_id)); 
 }
 
-$(function ()
-{
-	jQuery.fn.submitWithAjax = function(update)
-	{
-	    this.submit(function()
-	    {
-			console.log("submitWithAjax");
-	        $(this).find(':input').removeAttr('disabled');
-	        $.post($(this).attr('action'), $(this).serialize(), update, "script");
-	        return false;
-	    });
+$(document).ready(function() {
+  $('#form_submit_button').on('click', function() {
+    $('.loading-left').show();
+
+		$.get($('#search_form').attr('action'), 
+    $('#search_form').serialize(),
+    function() {
+			$('.loading-left').hide();
+		}, 'script');
+
+	  return false;			
+	});
+});
+
+$(function () {
+	jQuery.fn.submitWithAjax = function(update) {
+    this.submit(function()  {
+	    $(this).find(':input').removeAttr('disabled');
+	    $.post($(this).attr('action'), $(this).serialize(), update, "script");
+	    return false;
+	  });
 	};
 });
