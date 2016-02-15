@@ -1,1 +1,1 @@
-<div class="row">  <%= render(partial: 'shared/recipe_item', collection: @search_results) %></div>
+<div class="row">  <% if @search_results.present? %>    <div class="col-xs-12">      <%= page_entries_info @search_results, model: 'Recipe' %>    </div>    <div class="col-xs-12">      <%= will_paginate(@search_results) %>    </div>  <% end %>    <%= render(partial: 'shared/recipe_item', collection: @search_results) %></div>

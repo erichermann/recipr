@@ -3,7 +3,9 @@ class SearchController < ApplicationController
   respond_to :html, :js
 
   def index
-    @search_results = Recipe.where('title LIKE ?', "%#{params[:search]}%").paginate(per_page: PAGINATION_PER_PAGE, page: params[:page])
+    @search_results = Recipe.where('title LIKE ?', "%#{params[:search]}%")
+                      .paginate(per_page: PAGINATION_PER_PAGE,
+                                page: params[:page])
   end
 
   private

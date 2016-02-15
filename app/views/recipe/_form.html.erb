@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-xs-12">
-    <%=semantic_form_for(@recipe, :url=>(action_name == 'new') ? 
-	  	{:action => 'create', :controller => 'recipe'} : recipe_path, :html => {:multipart => true}) do |f| %>
+    <%=semantic_form_for(@recipe, url: (action_name == 'new') ? 
+	  	{ action: 'create', controller: 'recipe'} : recipe_path, html: { multipart: true }) do |f| %>
       <%= f.semantic_errors %>
     
       <%=f.inputs do %>
@@ -48,12 +48,11 @@
           </div>
         </div>
         <!-- === steps =============================== -->
-        
     
     		<div class="row">
           <div class="col-xs-12">
     			  <%=f.actions do %>
-              <%= f.action :submit, :as => :button, :button_html => { :disable_with => 'Wait...'} %>
+              <%= f.action :submit, as: :button, button_html: { disable_with: 'Wait...'} %>
     			  <% end %>
           </div>
     		</div>
@@ -63,8 +62,7 @@
 </div>
 
 <script type="text/javascript">
-jQuery(document).ready(function()
-{
+jQuery(document).ready(function() {
   $("#recipe_publication_date").datepicker({dateFormat : 'yy-mm-dd'});
 });
 </script>

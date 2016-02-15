@@ -34,6 +34,9 @@ spacing/padding styeles
 .padding-25 { padding: 2.5em; }
 .padding-30 { padding: 3.0em; }
 
+.padding-15-sides { padding: 0 1.5em 1.5em 1.5em; }
+.padding-20-sides { padding: 0 2.0em 2.0em 2.0em; }
+
 .border-grey { border:1px solid #ccc; }
 .border-light-grey { border:1px solid #333; }
 .border-dark-grey { border:1px solid #666; }

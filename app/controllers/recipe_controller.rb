@@ -3,7 +3,8 @@ class RecipeController < ApplicationController
   before_filter :authenticate_user!, except: ['show']
 
   def index
-    @recipes = Recipe.paginate(page: params[:page], per_page: PAGINATION_PER_PAGE)
+    @recipes = Recipe.paginate(page: params[:page],
+                               per_page: PAGINATION_PER_PAGE)
   end
 
   def new
@@ -12,14 +13,12 @@ class RecipeController < ApplicationController
 
   def create
     @recipe = Recipe.new(params[:recipe])
-    respond_to do |format|
-      if @recipe.save
-        flash[:info] = t('recipes.info.recipe_create_success')
-        format.html { redirect_to(redirect_to(edit_recipe_path(@recipe))) }
-      else
-        flash[:error] = t('recipes.recipe_create_error')
-        format.html { render action: 'new' }
-      end
+    if @recipe.save
+      flash[:info] = t('recipes.info.recipe_create_success')
+      redirect_to(edit_recipe_path(@recipe))
+    else
+      flash[:error] = t('recipes.recipe_create_error')
+      render action: 'new'
     end
   end
 
@@ -29,14 +28,12 @@ class RecipeController < ApplicationController
 
   def update
     @recipe = Recipe.find_by_id(params[:id])
-    respond_to do |format|
-      if @recipe.update_attributes(params[:recipe])
-        flash[:info] = t('recipes.info.recipe_update_success')
-        format.html { redirect_to(edit_recipe_path(@recipe)) }
-      else
-        flash[:error] = t('recipes.errors.recipe_update_error')
-        format.html { render action: 'edit' }
-      end
+    if @recipe.update_attributes(params[:recipe])
+      flash[:info] = t('recipes.info.recipe_update_success')
+      redirect_to(edit_recipe_path(@recipe))
+    else
+      flash[:error] = t('recipes.errors.recipe_update_error')
+      render action: 'edit'
     end
   end
 
@@ -47,10 +44,9 @@ class RecipeController < ApplicationController
   def destroy
     recipe = Recipe.find_by_id(params[:id])
     recipe.destroy
-    respond_to do |format|
-      flash[:info] = t('recipes.info.recipe_deleted_success', recipe_title: @recipe.title)
-      format.html { redirect_to(recipe_index_path) }
-    end
+    flash[:info] = t('recipes.info.recipe_deleted_success',
+                     recipe_title: recipe.title)
+    redirect_to(recipe_index_path)
   end
 
   private

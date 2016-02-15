@@ -15,7 +15,7 @@ gem 'less-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sqlite3'
-gem 'simple_form', :require => 'rake'
+gem 'simple_form', require: 'rake'
 gem 'therubyracer'
 gem 'turbolinks'
 gem 'twitter-bootstrap-rails'
@@ -33,6 +33,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'rubocop', require: false
+  gem 'simplecov'
   gem 'spring'
   gem 'web-console', '~> 2.0'
 end

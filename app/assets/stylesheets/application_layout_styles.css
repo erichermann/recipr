@@ -2,7 +2,7 @@
 http://www.colorzilla.com/gradient-editor/
 *************************************/
 
-/*-------------------------------------------------------------
+/*
 base styles
 ---------------------------------------------------------------*/
 html {
@@ -23,13 +23,39 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e3e5', endColorstr='#c7daea',GradientType=0 ); /* IE6-9 */
 }
 
-table th, table td {
-  padding: 10px;
-  border: 1px solid #000;
+table.data-grid {
+  width: 98%;
+  border-collapse: separate;
+  border-bottom: solid 1px #CDCDCD;
+  margin:1%;
 }
 
-table tr {
-  /*border: 1px solid #000;*/
+table.data-grid th:first-child {
+  border-top-left-radius: 8px;
+}
+
+table.data-grid th:first-child, table.data-grid td:first-child {
+  border-left: solid 1px #CDCDCD;
+}
+
+table.data-grid th:last-child {
+  border-top-right-radius: 8px;
+}
+
+table.data-grid th{
+  background-color: #E6E6E6;
+}
+
+table.data-grid tbody tr:last-child {
+  border-bottom: 0;
+}
+
+table.data-grid th, table.data-grid td {
+  padding: 5px;
+  text-align: center;
+  vertical-align: middle;
+  border-top: solid 1px #CDCDCD;
+  border-right: solid 1px #CDCDCD;
 }
 
 a {
@@ -52,10 +78,9 @@ a {
 
 
 
-/*-------------------------------------------------------------
+/*
 containers
 ---------------------------------------------------------------*/
-
 #main-container {
   max-width: 1170px !important;
   border-top: 3px solid #838184;
@@ -70,7 +95,7 @@ containers
 
 .header {
   max-width:1170px;
-  height:305px;
+  max-height:305px;
 }
 
 .header-logo {
@@ -96,7 +121,7 @@ containers
 
 
 
-/*-------------------------------------------------------------
+/*
 navigation paths
 ---------------------------------------------------------------*/
 .pages-nav {
@@ -149,6 +174,48 @@ navigation paths
 
 .even { background-color: #f4f8f9; }
 /*--------------------------------------------------------------*/
+
+
+
+/*
+pagination styles
+-----------------------------------------------------------------*/
+#pagination.pagination a {
+	color:#709698;
+	text-decoration:underline;
+}
+
+#pagination.pagination a:hover {
+	color:#66CC99;
+	text-decoration:underline;
+}
+
+#pagination.pagination {
+	font-size:14px;
+	text-decoration:none;
+}
+
+.previous_page {
+	font-size:14px;
+	text-decoration:none !important;
+}
+
+.next_page {
+	font-size:14px;
+	text-decoration:none !important;
+}
+
+.current {
+	color:#000;
+	font-size:14px;
+	text-decoration:none;
+}
+
+#pagination.current {
+	color:#ffff00;
+	text-decoration:none;
+}
+/*---------------------------------------------------------------*/
 
 
 /*
@@ -205,4 +272,4 @@ ul.no-bullet-list ul, ol.no-bullet-list ul {
   border-left: 1px solid #666;
   border-right: 2px solid #666;
 }
-
+/*--------------------------------------------------------------*/
