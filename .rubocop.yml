@@ -8,10 +8,10 @@ AllCops:
     - db/**/*
     - config/**/*
     - bin/**/*
-  TargetRubyVersion: 2.2.2
+  TargetRubyVersion: 2.2
 
-Style/FrozenStringLiteralComment:
-  EnforcedStyle: always
+#Style/FrozenStringLiteralComment:
+# EnforcedStyle: always
 
 Documentation:
   Enabled: false

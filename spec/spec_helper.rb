@@ -1,7 +1,20 @@
 require_relative 'support/controller_helpers'
 require 'devise'
+require 'capybara'
+require 'capybara/rails'
+require 'capybara/rspec'
+require 'database_cleaner'
+
+# DatabaseCleaner.clean_with :truncation
+# DatabaseCleaner.strategy = :transaction
+# DatabaseCleaner.clean
 
 RSpec.configure do |config|
+  config.before(:suite) do
+    DatabaseCleaner.clean_with :truncation
+    DatabaseCleaner.strategy = :transaction
+  end
+
   config.include ControllerHelpers, type: :controller
 
   Warden.test_mode!

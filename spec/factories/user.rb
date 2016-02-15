@@ -1,4 +1,3 @@
-# User factory
 FactoryGirl.define do
   factory :user do
     first_name 'Fake'

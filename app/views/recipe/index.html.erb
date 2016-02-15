@@ -24,7 +24,7 @@
           <tr class="<%=cycle('odd','even') %>">
             <td class='padding-10'><%=h recipe.title %></td>
             <td class='padding-10'><%=edit_link(edit_recipe_path(recipe), page: params[:page]) %></td>
-            <td class='padding-10'><%=delete_link(recipe_path(recipe), page: params[:page]) %></td>
+            <td class='padding-10'><%=delete_link(recipe_path(recipe, page: params[:page])) %></td>
           </tr>
         <% end %>
       </tbody>

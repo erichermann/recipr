@@ -6,4 +6,4 @@ en:
     info:
       recipe_create_success: 'Your recipe has been created'
       recipe_update_success: 'Your recipe has been updated'
-      recipe_deleted_success: '%{recipe_title} has been updated'
+      recipe_deleted_success: '%{recipe_title} has been deleted'

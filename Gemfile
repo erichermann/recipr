@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.2.2'
-gem 'rails', '4.2.1'
+gem 'rails', '4.2.5'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass'
@@ -22,6 +22,10 @@ gem 'twitter-bootstrap-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate'
 
+group :development do
+  gem 'web-console', '~> 2.0'
+end
+
 group :development, :test do
   gem 'byebug', '~> 1.1.1'
   gem 'cucumber'
@@ -35,9 +39,10 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'simplecov'
   gem 'spring'
-  gem 'web-console', '~> 2.0'
 end
 
 group :test do
+  gem 'database_cleaner'
   gem 'rspec-html-matchers'
+  gem 'selenium-webdriver'
 end

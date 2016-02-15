@@ -46,7 +46,7 @@ class RecipeController < ApplicationController
     recipe.destroy
     flash[:info] = t('recipes.info.recipe_deleted_success',
                      recipe_title: recipe.title)
-    redirect_to(recipe_index_path)
+    redirect_to(recipe_index_path(page: params[:page]))
   end
 
   private
