@@ -5,10 +5,6 @@ require 'capybara/rails'
 require 'capybara/rspec'
 require 'database_cleaner'
 
-# DatabaseCleaner.clean_with :truncation
-# DatabaseCleaner.strategy = :transaction
-# DatabaseCleaner.clean
-
 RSpec.configure do |config|
   config.before(:suite) do
     DatabaseCleaner.clean_with :truncation
